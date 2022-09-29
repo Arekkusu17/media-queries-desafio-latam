@@ -152,9 +152,6 @@ footer {
   .product-grid {
     display: grid;
     height: 70vh;
-    grid-column-start: section;
-    grid-row-start: section;
-
     grid-template-columns: 1fr 1fr;
   }
 
