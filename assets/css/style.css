@@ -6,11 +6,14 @@ body {
   grid-template-areas:
     "nav"
     "aside"
-    "section"
+    "main"
     "footer";
   font-family: "Roboto", sans-serif;
 }
 
+/* MOBILE LAYOUT */
+
+/* NAVBAR */
 nav {
   grid-area: nav;
   background: #01579b;
@@ -44,12 +47,14 @@ aside {
   padding: 1rem 0;
 }
 
-.filters {
+/*  */
+
+.filters-select {
   padding-top: 5px;
   width: 100%;
 }
 
-.filters select {
+.filters-select select {
   border: 2px solid #e1e2e1;
   border-radius: 5px;
   height: 42px;
@@ -57,13 +62,15 @@ aside {
   margin-bottom: 1rem;
 }
 
-section {
-  grid-area: section;
+/* PRODUCTS SECTION */
+
+main {
+  grid-area: main;
 }
 
 .product-grid {
   display: grid;
-  height: 60vh;
+  height: 62vh;
   grid-template-columns: repeat(1, 1fr);
   overflow-y: scroll;
 }
@@ -101,6 +108,8 @@ section {
   border-radius: 5px;
 }
 
+/* FOOTER */
+
 footer {
   grid-area: footer;
   background-color: #002f6c;
@@ -112,26 +121,32 @@ footer {
   padding-top: 5px;
 }
 
+/* TABLET MEDIA QUERIES FOR LAYOUT */
+
 @media screen and (min-width: 576px) {
   body {
     grid-template-columns: 20% 80%;
     grid-template-rows: 1fr 10fr 1fr;
     grid-template-areas:
       "nav nav"
-      "aside section"
+      "aside main"
       "footer footer";
   }
 }
 
+/* DESKTOP MEDIA QUERIES FOR LAYOUT */
+
 @media screen and (min-width: 992px) {
   body {
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 15% 85%;
     grid-template-areas:
       "nav aside "
-      "nav section "
-      "footer section ";
+      "nav main "
+      "footer main ";
   }
 }
+
+/* TABLET MEDIA QUERIES FOR COMPONENTS */
 
 @media screen and (min-width: 576px) {
   .product-grid {
@@ -173,10 +188,12 @@ footer {
   }
 }
 
+/* DESKTOP MEDIA QUERIES FOR COMPONENTS */
+
 @media screen and (min-width: 992px) {
   .product-grid {
     display: grid;
-    height: 75vh;
+    height: 70vh;
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -202,10 +219,12 @@ footer {
   }
 }
 
+/* PAGINATION-COMPONENT */
+
 .pagination {
   display: flex;
   justify-content: center;
-  margin: 2rem auto;
+  margin: 1.5rem auto;
   padding: 0;
   text-align: center;
 }
